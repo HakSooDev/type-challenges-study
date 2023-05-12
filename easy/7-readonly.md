@@ -3,6 +3,7 @@
 > [Problem link](https://github.com/type-challenges/type-challenges/tree/main/questions/00007-easy-readonly)
 
 <h2> Problem </h2>
+
 Implement the built-in `Readonly<T>` generic without using it.
 
 Constructs a type with all properties of T set to readonly, meaning the properties of the constructed type cannot be reassigned.
