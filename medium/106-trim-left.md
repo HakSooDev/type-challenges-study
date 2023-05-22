@@ -16,8 +16,10 @@ type trimed = TrimLeft<"  Hello World  ">; // expected to be 'Hello World  '
 
 ```ts
 type WhiteSpace = " " | "\n" | "\t";
-type TrimLeft<S extends string> = S extends `${WhiteSpace}${infer A}`
-  ? TrimLeft<A>
+type Trim<S extends string> = S extends `${infer A}${WhiteSpace}`
+  ? Trim<A>
+  : S extends `${WhiteSpace}${infer A}`
+  ? Trim<A>
   : S;
 ```
 
